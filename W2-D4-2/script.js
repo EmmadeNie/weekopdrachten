@@ -38,3 +38,4 @@ removeAllButton.addEventListener('click', removeAll)
     spottedAnimalList.innerHTML = "";
 }
 */
+
