@@ -1,0 +1,36 @@
+a:hover{
+    color: black;
+    font-weight: bold;
+}
+
+a:active{
+    color: red;
+    font-style: italic;
+}
+
+/*a:visited{
+    color: yellow;
+}*/
+
+nav {
+    background-color: blue;
+    height: 30px;
+}
+
+.current-page{
+    background-color: gray;
+}
+.current-page:hover{
+    background-color: pink;
+}
+
+#search:focus {
+    color: green;
+    border: 3px solid gray;
+    font-size: 20px;
+}
+li, form{
+    display: inline;
+    margin: 2px;
+  }
+ 
