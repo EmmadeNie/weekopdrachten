@@ -1,0 +1,48 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:700);
+
+body     {
+  background:#231F20;
+  text-align:center;
+  display: flex;
+}
+
+h1         {
+  color:#FFF;
+  font-family:'Oswald';
+  font-weight:700;
+  position:relative;  
+  margin:30px auto;
+  text-transform:uppercase;
+  width:550px;
+  border: solid 2px white;
+}
+
+h1::before, h1::after {
+  content: " ";
+  background-color: #4A90E2;
+  height: 25px;
+  width:25px;
+  position: absolute;
+}
+
+h1::before {
+border-radius: 15px 0px 0px 15px;
+left: 10px;
+top: 10px;
+}
+
+h1::after{
+  border-radius: 0px 15px 15px 0px;
+  top: 10px;
+  right: 10px;
+
+}
+selector voor het linker halve cirkeltje {  
+// border radius, generator: https://www.cssmatic.com/border-radius 
+// Positioneer je halve rondje met left en top
+}
+
+selector voor het rechter halve cirkeltje {  
+// border radius, generator: https://www.cssmatic.com/border-radius 
+// Positioneer je halve rondje met left en top
+} */
