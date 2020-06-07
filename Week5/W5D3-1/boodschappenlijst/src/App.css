@@ -1,0 +1,14 @@
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.list li:nth-child(odd) {
+  background-color: lightblue;
+}
