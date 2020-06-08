@@ -12,19 +12,21 @@ class Container extends React.Component {
         { id: 3, title: "magere kwark" },
         { id: 4, title: "tofu" },
       ],
-      shoppingListItems: [{ id: 1, title: "Appels" }],
+      shoppingListItems: [{ id: 1, title: "Appels", amount: 1 }],
     };
   }
 
-  handleClickGroceryItem = (event) => {
-    const clickedItem = event.target.id;
-    const shoppingListItem = this.state.groceryItems.find(
-      (item) => item.id == clickedItem
-    );
-
-    const currentShoppingList = this.state.shoppingListItems;
-    currentShoppingList.push(shoppingListItem);
-    this.setState({ shoppingListItems: currentShoppingList });
+  handleClickGroceryItem = (newItem) => {
+    this.setState((prevState) => {
+      const newList = prevState.shoppingListItems.map((oldItem) =>
+        oldItem.title === newItem.title
+          ? { ...oldItem, amount: oldItem.amount + 1 }
+          : oldItem
+      );
+      !newList.some((oldItem) => oldItem.title === newItem.title) &&
+        newList.push({ id: newItem.id, title: newItem.title, amount: 1 });
+      return { shoppingListItems: newList };
+    });
   };
 
   emptyShoppingCart = () => {
@@ -32,7 +34,10 @@ class Container extends React.Component {
   };
 
   addGroceryItem = (newValue) => {
-    console.log(newValue);
+    const newGroceryItem = { id: 10, title: newValue };
+    const currentGroceryList = this.state.groceryItems;
+    currentGroceryList.push(newGroceryItem);
+    this.setState({ GroceryItems: currentGroceryList });
   };
 
   render() {

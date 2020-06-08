@@ -13,30 +13,22 @@ class NewGroceryItem extends React.Component {
   };
 
   submitItem = () => {
-    console.log("hello");
-    // e.preventdefault();
-    // this.props.addGrocery(this.state.input);
-    // this.setState({
-    //   input: "",
-    // });
+    this.props.addGrocery(this.state.input);
   };
 
   render() {
     return (
-      <form className="groceries-input">
+      <div>
         <input
           value={this.state.input}
           type="text"
           placeholder="new item"
           onChange={this.newItem}
         />
-        <button
-          className="button-primary"
-          onClick={() => console.log("hellowww")}
-        >
+        <button className="button-primary" onClick={this.submitItem}>
           add grocery
         </button>
-      </form>
+      </div>
     );
   }
 }
